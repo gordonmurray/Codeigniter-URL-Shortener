@@ -40,6 +40,8 @@
 
 $route['(:any)'] = "redirect/index/$1";
 
+$route['shorten/create'] = "shorten/create"; // overwrite the previous route
+
 $route['default_controller'] = "shorten";
 
 $route['404_override'] = '404';

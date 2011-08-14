@@ -6,7 +6,6 @@
 	'name' => 'url',
 	'id' => 'url',
 	'value' => '',
-	'maxlength' => '100',
 	'size' => '50',
 	'style' => '',
     );

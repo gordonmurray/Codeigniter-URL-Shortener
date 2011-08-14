@@ -17,7 +17,7 @@ if (!defined('BASEPATH'))
   | path to your installation.
   |
  */
-$config['base_url'] = 'http://localhost/murr.ie/Codeigniter-URL-Shortener/';
+$config['base_url'] = '';
 
 
 $config['link_length'] = 3;

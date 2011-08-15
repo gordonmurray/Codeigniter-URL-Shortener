@@ -11,6 +11,8 @@ class Redirect extends CI_Controller
      */
     public function index()
     {
+	$this->log_redirect();
+
 	$alias = $this->uri->segment(1);
 
 	$this->db->select('url');
@@ -28,8 +30,23 @@ class Redirect extends CI_Controller
 	}
 	else
 	{
-	    echo "Alias '$alias'not found";
+	    echo "Sorry, alias '$alias' not found";
 	}
+    }
+
+    /**
+     * Method to log a redirect
+     */
+    function log_redirect()
+    {
+	$data = array(
+	    'datetime' => date("Y-m-d H:i:s"),
+	    'ip_address' => $this->input->ip_address(),
+	    'browser_agent' => $this->input->user_agent(),
+	    'url_string' => $this->uri->uri_string()
+	);
+
+	$this->db->insert('redirects', $data);
     }
 
 }

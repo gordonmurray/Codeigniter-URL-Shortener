@@ -1,5 +1,7 @@
 <?php $this->load->view('header'); ?>
 
+<h3>Enter a long URL in the box and press 'Shorten'</h3>
+
 <form name="ajax_form" id ="ajax_form" method="post">
     <?php
     $data = array(

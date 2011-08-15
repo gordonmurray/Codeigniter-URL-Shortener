@@ -23,7 +23,7 @@ class Redirect extends CI_Controller
 	    {
 		$this->load->helper('url');
 
-		redirect($row->url, 'refresh');
+		redirect($row->url, 'refresh', 301);
 	    }
 	}
 	else

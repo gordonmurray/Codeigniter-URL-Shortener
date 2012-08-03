@@ -1,8 +1,11 @@
-CREATE TABLE `redirects` (
+--
+-- Table structure for table `redirects`
+--
+CREATE TABLE IF NOT EXISTS `redirects` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `datetime` datetime DEFAULT NULL,
-  `ip_address` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
-  `browser_agent` text CHARACTER SET utf8,
-  `url_string` text CHARACTER SET utf8,
+  `ip_address` varchar(20) DEFAULT NULL,
+  `browser_agent` text,
+  `url_string` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;

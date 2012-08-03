@@ -4,9 +4,9 @@
 
 CREATE TABLE IF NOT EXISTS `links` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `alias` varchar(6) CHARACTER SET utf8 DEFAULT NULL,
-  `url` text CHARACTER SET utf8,
+  `alias` varchar(6) DEFAULT NULL,
+  `url` text,
   `created` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `alias` (`alias`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

@@ -1,30 +1,34 @@
 <?php $this->load->view('header'); ?>
 
-<h3>Enter a long URL in the box and press 'Shorten'</h3>
+<?php echo form_open('shorten', array('name' => 'ajax_form', 'id' => 'ajax_form', 'class'=>'form-horizontal')); ?>
 
-<form name="ajax_form" id ="ajax_form" method="post">
+<div id="alias" class="alert">Simple URL shortener</div>
+
+<div class="well" style="text-align: center;">
+
     <?php
     $data = array(
-	'name' => 'url',
-	'id' => 'url',
-	'value' => '',
-	'size' => '50',
-	'style' => '',
+        'name' => 'url',
+        'id' => 'url',
+        'class' => 'span6',
+        'placeholder' => 'Please enter a full length URL and press \'Shorten\''
     );
-
     echo form_input($data);
-
-    $data = array(
-	'name' => 'shorten_url',
-	'id' => 'shorten_url',
-	'value' => 'Shorten'
-    );
-
-    echo form_submit($data);
-
-    echo form_close();
     ?>
 
-    <div id="alias"></div>
+    <?php
+    $data = array(
+        'name' => 'shorten_url',
+        'id' => 'shorten_url',
+        'value' => 'Shorten',
+        'class' => 'btn btn-info'
+    );
+    echo form_submit($data);
+    ?>
 
-    <?php $this->load->view('footer'); ?>
+</div>
+
+
+<?php echo form_close(); ?>
+
+<?php $this->load->view('footer'); ?>

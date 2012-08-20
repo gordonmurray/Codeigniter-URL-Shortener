@@ -2,24 +2,27 @@ $(document).ready(function(){
 
     $("#shorten_url").click(
 
-	function(){
+        function(){
 
-	    var url=$("#url").val();
+            var url=$("#url").val();
 
-	    $.ajax({
-		type: "POST",
-		url: base_url + "index.php/shorten/create",
-		data: "url="+url,
-		cache:false,
-		success:
-		function(data){
-		    $("#alias").html(data);
-		}
-	    });
+            if(url!='')
+            {
+                $.ajax({
+                    type: "POST",
+                    url: base_url + "index.php/shorten/create",
+                    data: "url="+url,
+                    cache:false,
+                    success:
+                    function(data){
+                        $("#alias").html(data);
+                    }
+                });
+            }
 
-	    return false;
+            return false;
 
-	});
+        });
 
 
 });

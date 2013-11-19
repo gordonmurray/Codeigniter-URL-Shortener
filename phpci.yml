@@ -16,9 +16,8 @@ setup:
         - "GRANT ALL PRIVILEGES ON test.* TO test@'localhost' IDENTIFIED BY 'test';"
 
 test:
-    php_mess_detector:
-        allow_failures: true
+    php_loc:
+        directory: application
 
 complete:
-    mysql:
-        - "DROP DATABASE IF EXISTS test;"
+    

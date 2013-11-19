@@ -1,0 +1,19 @@
+build_settings:
+    mysql:
+        host: "localhost"
+        user: "root"
+        pass: ""
+
+setup:
+    mysql:
+        - "DROP DATABASE IF EXISTS test;"
+        - "CREATE DATABASE test;"
+        - "GRANT ALL PRIVILEGES ON test.* TO test@'localhost' IDENTIFIED BY 'test';"
+
+test:
+    php_mess_detector:
+        allow_failures: true
+
+complete:
+    mysql:
+        - "DROP DATABASE IF EXISTS test;"

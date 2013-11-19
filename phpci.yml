@@ -1,4 +1,9 @@
 build_settings:
+  ignore:
+    - "system"
+    - "sql"
+    - "css"
+    - "javascript"
     mysql:
         host: "localhost"
         user: "root"
